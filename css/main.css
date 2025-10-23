@@ -1,0 +1,326 @@
+/* ---------------- GENERAL ---------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to bottom right, #fff5f8, #ffeef3);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ---------------- HEADER ---------------- */
+.wedding-header {
+  text-align: center;
+  margin: 0;
+  background-color: #2F5D8A;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.wedding-header h1 {
+  font-family: 'Great Vibes', cursive;
+  color: white;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* ---------------- SLIDER ---------------- */
+.slider-section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 650px; /* ajusta según tu gusto */
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantiene la imagen proporcional */
+  object-position: center;
+}
+
+/* Manto oscuro sobre la imagen */
+.swiper-slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* Sombra sutil */
+  z-index: 1;
+}
+
+/* Texto centrado */
+.slide-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Great Vibes', cursive;
+  color: #fff;
+  font-size: 5rem;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  width: 100%;
+  z-index: 2; /* sobre el manto */
+}
+
+/* Paginación */
+.swiper-pagination {
+  bottom: 15px !important;
+}
+
+.swiper-pagination-bullet {
+  background: white;      /* color de las bolitas */
+  opacity: 0.8;           /* transparencia, opcional */
+}
+
+.swiper-pagination-bullet-active {
+  background: white;      /* bolita activa */
+  opacity: 1;
+}
+
+/* ---------------- UPLOAD ---------------- */
+.container {
+  background: white;
+  padding: clamp(16px, 5vw, 30px); /* se adapta al tamaño del viewport */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: min(90%, 420px);
+  margin: 40px auto;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  color: #2F5D8A;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+p.subtitle {
+  color: #555;
+  font-size: 0.95em;
+  margin-bottom: 25px;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 10px auto 20px;
+  padding: clamp(8px, 2vw, 12px); /* se ajusta según pantalla */
+  border: 2px dashed #2F5D8A;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 100%; /* asegura que nunca se desborde */
+  box-sizing: border-box; /* padding dentro del ancho */
+  cursor: pointer;
+  text-align: center;
+}
+
+button {
+  background: #2F5D8A;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #234568;
+}
+
+#msg {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* ---------------- FOOTER ---------------- */
+.wedding-footer {
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  background-color: #234568;
+  /* Diferente al header */
+  font-weight: 500;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1024px) {
+  .swiper {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper {
+    height: 350px;
+  }
+
+  .slide-text {
+    font-size: 3.2rem;
+  }
+
+  .wedding-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper {
+    height: 250px;
+  }
+
+  .slide-text {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .wedding-header h1 {
+    font-size: 1.7rem;
+  }
+}
+
+/* ---------------- LOADER ---------------- */
+#preloader {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #4F7EB0;
+    z-index: 11000;
+    position: fixed;
+    display: block;
+}
+
+.pulse {
+    height: 150px;
+    width: 200px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.pulse i {
+    color: #ffffff;
+    font-size: 38px;
+}
+
+.pulse:after {
+    content: '';
+    display: block;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200px 100px" enable-background="new 0 0 200px 100px" xml:space="preserve"><polyline fill="none" stroke-width="3px" stroke="white" points="2.4,58.7 70.8,58.7 76.1,46.2 81.1,58.7 89.9,58.7 93.8,66.5 102.8,22.7 110.6,78.7 115.3,58.7 126.4,58.7 134.4,54.7 142.4,58.7 197.8,58.7 "/></svg>') 0 0 no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-animation: 2s pulse linear infinite;
+    animation: 2s pulse linear infinite;
+    clip: rect(0, 0, 100px, 0);
+}
+
+.pulse:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 2px;
+    right: 2px;
+    bottom: 0;
+    top: 16px;
+    margin: auto;
+    height: 3px;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        clip: rect(0, 0, 100px, 0);
+        opacity: 0.4;
+    }
+    4% {
+        clip: rect(0, 66.66667px, 100px, 0);
+        opacity: 0.6;
+    }
+    15% {
+        clip: rect(0, 133.33333px, 100px, 0);
+        opacity: 0.8;
+    }
+    20% {
+        clip: rect(0, 300px, 100px, 0);
+        opacity: 1;
+    }
+    80% {
+        clip: rect(0, 300px, 100px, 0);
+        opacity: 0;
+    }
+    90% {
+        clip: rect(0, 300px, 100px, 0);
+        opacity: 0;
+    }
+    100% {
+        clip: rect(0, 300px, 100px, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        clip: rect(0, 0, 100px, 0);
+    }
+    4% {
+        clip: rect(0, 66.66667px, 100px, 0);
+    }
+    15% {
+        clip: rect(0, 133.33333px, 100px, 0);
+    }
+    20% {
+        clip: rect(0, 300px, 100px, 0);
+        opacity: 1;
+    }
+    80% {
+        clip: rect(0, 300px, 100px, 0);
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        clip: rect(0, 300px, 100px, 0);
+        opacity: 0;
+    }
+}

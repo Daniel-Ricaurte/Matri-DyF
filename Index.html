@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MATRIMONIO D&F 💍</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div id="preloader">
+    <div class="preloader pulse">
+      <i class="fa fa-heartbeat" aria-hidden="true"></i>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="wedding-header">
+    <h1>Nuestro amor, guiado por Dios ✨⛪</h1>
+  </header>
+
+  <!-- SLIDER -->
+  <section class="slider-section">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/slider/slider-01.jpg" alt="Foto 1">
+          <div class="slide-text">Daniel & Fernanda</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider/slider-02.jpg" alt="Foto 2">
+          <div class="slide-text">Daniel & Fernanda</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider/slider-03.jpg" alt="Foto 3">
+          <div class="slide-text">Daniel & Fernanda</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider/slider-04.jpg" alt="Foto 4">
+          <div class="slide-text">Daniel & Fernanda</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider/slider-05.jpg" alt="Foto 5">
+          <div class="slide-text">Daniel & Fernanda</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider/slider-06.jpg" alt="Foto 6">
+          <div class="slide-text">Daniel & Fernanda</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider/slider-07.jpg" alt="Foto 7">
+          <div class="slide-text">Daniel & Fernanda</div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- SUBIDA DE ARCHIVOS -->
+  <section class="upload-section">
+    <div class="container">
+      <h2>Sube tus recuerdos 💌</h2>
+      <p class="subtitle">Comparte tus recuerdos de nuestro gran día</p>
+
+      <input type="file" id="fileInput" accept="image/*,video/*" multiple>
+      <button id="btnEnviar">Enviar</button>
+      <p id="msg"></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="wedding-footer">
+    <p>&copy; 2025 Matrimonio D&F. Todos los derechos reservados 💖</p>
+  </footer>
+
+  <!-- Librerías -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="js/custom.js"></script>
+  <script src="js/upload.js"></script>
+
+  <!-- Swiper -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new Swiper(".swiper", {
+        loop: true,
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        pagination: { el: ".swiper-pagination", clickable: true },
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: 700,
+        effect: "slide"
+      });
+    });
+  </script>
+
+</body>
+
+</html>
